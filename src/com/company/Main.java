@@ -39,9 +39,9 @@ public class Main {
 		System.out.println();
 		Arrays.sort(arr);
 		Arrays.sort(arr1);
-		System.out.println("for S = "+S);
-		System.out.println("while S = "+ S1);
-		System.out.println("do while S = " +S2);
+		System.out.println("for S="+S);
+		System.out.println("while S="+ S1);
+		System.out.println("do while S=" +S2);
 		for (int k = 0; k < 10; k++) {
 			System.out.print(arr[k]+" ");
 		}
