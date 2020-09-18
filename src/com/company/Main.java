@@ -50,6 +50,6 @@ public class Main {
 			System.out.print(arr1[k]+" ");
 		}
 		System.out.println();
-		System.out.println("5!"+factorial(5));
+		System.out.println("5! = "+factorial(5));
 	}
 }

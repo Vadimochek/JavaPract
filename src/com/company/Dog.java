@@ -34,26 +34,34 @@ public class Dog {
         return "Это "+n+" ему "+a;
     }
 }
-class Pitomnik{
+class Pitomnik {
     public static void main(String[] args) {
-        List<Dog> pets=new ArrayList<>();
-        Dog spitz=new Dog("Pol",3);
-        System.out.println(spitz.toString(spitz.getName(),spitz.getAge()));
-        System.out.println("Хотите изменить имя и возраст?");
-        Scanner in=new Scanner(System.in);
-        String q=in.nextLine();
-        if(q.equals("Да") || q.equals("да"))
-        {
-            System.out.println("Введите данные - сначала годы, потом имя");
-            int n=in.nextInt();
-            spitz.setAge(n);
-            String str=in.next();
-            spitz.setName(str);
-            System.out.println("Вывод данных о собаке");
-            System.out.println(spitz.toString(spitz.getName(),spitz.getAge()));
-        }
-        System.out.println("Переводя на человеческий, собаке лет - "+ spitz.toHuman(spitz.getAge()));
-        System.out.println("Добавление собаки в питомник...");
-        pets.add(spitz);
+        List<Dog> pets = new ArrayList<>();
+        int pi,qu=0;
+        do {
+            Dog spitz = new Dog("Pol", 3);
+            System.out.println(spitz.toString(spitz.getName(), spitz.getAge()));
+            System.out.println("Хотите изменить имя и возраст?");
+            Scanner in = new Scanner(System.in);
+            String q = in.nextLine();
+            if (q.equals("Да") || q.equals("да")) {
+                System.out.println("Введите данные - сначала годы, потом имя");
+                int n = in.nextInt();
+                spitz.setAge(n);
+                String str = in.next();
+                spitz.setName(str);
+                System.out.println("Вывод данных о собаке");
+                System.out.println(spitz.toString(spitz.getName(), spitz.getAge()));
+            }
+            System.out.println("Переводя на человеческий, собаке лет - " + spitz.toHuman(spitz.getAge()));
+            System.out.println("Добавление собаки в питомник...");
+            qu++;
+            pets.add(spitz);
+            System.out.println("Если хотите выйти, нажмите 10, иначе нажмите другое");
+            pi=in.nextInt();
+        } while (pi != 10) ;
+        System.out.println("Cмотрим питомник...");
+        for(int i=0;i<qu;i++)
+            System.out.println((i+1)+" питомец "+pets.get(i).getName());
     }
 }
