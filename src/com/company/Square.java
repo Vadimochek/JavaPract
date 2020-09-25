@@ -19,4 +19,10 @@ public class Square {
     public void setWidth(int width) {
         this.width = width;
     }
+    void Coloring(){
+        System.out.println("Зеленый");
+    }
+    void Ugol(){
+        System.out.println("4 угла");
+    }
 }

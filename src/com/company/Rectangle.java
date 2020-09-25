@@ -1,6 +1,6 @@
 package com.company;
 
-public class Rectangle {
+public class Rectangle extends Shap {
     private int a,b,c;
 
     public void setA(int a) {
@@ -26,4 +26,11 @@ public class Rectangle {
     public int getC() {
         return c;
     }
+    void Coloring(){
+        System.out.println("Красный");
+    }
+    void Ugol(){
+        System.out.println("4 угла");
+    }
+
 }
