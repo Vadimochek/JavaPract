@@ -105,7 +105,7 @@ public class Find {
     public static void main(String[] args) {
         Student[] ar=new Student[20];
         for(int i=0;i<20;i++){
-            ar[i]= new Student();
+            ar[i]= new Student("dfd",10);
         }
         System.out.println("Хотим найти значение ID=10 ");
         long startTime = System.nanoTime();
