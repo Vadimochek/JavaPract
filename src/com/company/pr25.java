@@ -21,6 +21,8 @@ public class pr25 {
 
         System.out.println("Введите данные <Год><Месяц><Число> <Часы1><минуты>");
         trans();
+        // Задание 3
+        work();
     }
     static void trans() throws ParseException {
         Scanner in=new Scanner(System.in);
@@ -39,8 +41,6 @@ public class pr25 {
         calendar.set(Calendar.HOUR, in.nextInt());
         calendar.set(Calendar.MINUTE, in.nextInt());
         System.out.println(sdf2.format(calendar.getTime()));
-        // Задание 3
-        work();
     }
 
     public static void work() throws ParseException {
